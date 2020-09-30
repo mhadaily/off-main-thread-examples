@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>ffmpegjs wasm</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        margin: 20px;
+        border: 1px solid white;
+        padding: 20px;
+        cursor: pointer;
+      }
+      #message {
+        font-size: 22px;
+      }
+      button:hover {
+        background: black;
+        color: #fff;
+      }
+
+      .bouncy-ball {
+        background: red;
+        border-radius: 50%;
+        position: fixed;
+        top: 22%;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+        -ms-animation: bounce 3s infinite;
+        -moz-animation: bounce 3s infinite;
+        -webkit-animation: bounce 3s infinite;
+        animation: bounce 3s infinite;
+      }
+
+      @-ms-keyframes bounce {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 80px);
+        }
+        100% {
+          left: 0;
+        }
+      }
+
+      @-moz-keyframes bounce {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 80px);
+        }
+        100% {
+          left: 0;
+        }
+      }
+
+      @-webkit-keyframes bounce {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 80px);
+        }
+        100% {
+          left: 0;
+        }
+      }
+
+      @keyframes bounce {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 80px);
+        }
+        100% {
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Record video from webcam and transcode to mp4 (x264) and play!</h3>
+    <div>
+      <video id="webcam" width="520px" height="380px"></video>
+      <video id="output-video" width="520px" height="380px" controls></video>
+    </div>
+    <button id="record" disabled>Start Recording</button>
+    <p id="message"></p>
+    <div class="bouncy-ball"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

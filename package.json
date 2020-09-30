@@ -1,0 +1,27 @@
+{
+  "name": "off-main-thread-examples",
+  "version": "1.0.0",
+  "description": "Off main thread examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start:ffmpeg": "parcel ffmpegjs-wasm/index.html --cert localhost.pem --key localhost-key.pem",
+    "start:redux": "parcel redux-react-comlink/index.html --cert localhost.pem --key localhost-key.pem"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.8.3",
+    "comlink": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+  }
+}
